@@ -21,12 +21,13 @@ function init()
     currentItem= getCurrentItem()
 
     //Let's say sessionStorage is an API call
-    cart = JSON.parse(sessionStorage.getItem('cart'))
+    
     sessionStorage.setItem('cart',JSON.stringify({
         products: [],
         subtotal: 0,
         totalAmount: 0
     }))
+    cart = JSON.parse(sessionStorage.getItem('cart'))
     sessionStorage.setItem('discountCodes',JSON.stringify(
     [
         {
